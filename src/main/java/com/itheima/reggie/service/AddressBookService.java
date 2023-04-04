@@ -1,0 +1,11 @@
+package com.itheima.reggie.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.itheima.reggie.entity.AddressBook;
+
+/**
+ * @author HuangQX
+ * @create 2023-04-03-15:19
+ */
+public interface AddressBookService extends IService<AddressBook> {
+}
