@@ -14,8 +14,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport {
 
-    @Bean//弹幕说使用StringRedisTemplate更好
+    @Bean
     public RedisTemplate<Object,Object> redisTemplate(RedisConnectionFactory connectionFactory){
+        //弹幕说使用StringRedisTemplate更好
         RedisTemplate<Object,Object> redisTemplate = new RedisTemplate<>();
         //默认的Key序列化器为：JdkSerializationRedisSerialization
         redisTemplate.setKeySerializer(new StringRedisSerializer());
